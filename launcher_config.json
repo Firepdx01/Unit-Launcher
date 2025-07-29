@@ -1,0 +1,65 @@
+{
+  "minecraft_directory": "E:/minecraft",
+  "ram": 2048,
+  "min_ram": 1024,
+  "mod_loader": "None",
+  "mods_folder": "",
+  "extra_jvm_args": "",
+  "username": "Firepdx",
+  "server": "",
+  "accounts": [
+    {
+      "name": "Firepdx"
+    }
+  ],
+  "java_path": "E:/New folder (7)/jre/OpenJDK21U-jre_x64_windows_hotspot_21.0.3_9/bin/javaw.exe",
+  "window_width": 1024,
+  "window_height": 768,
+  "maximized": false,
+  "theme": "dark",
+  "last_version": "25w07a",
+  "news_url": "https://example.com/minecraft-news",
+  "discord_rpc": true,
+  "auto_update": true,
+  "advanced_mode": false,
+  "custom_resolution": true,
+  "resolution_width": 1280,
+  "resolution_height": 720,
+  "fullscreen": true,
+  "show_console": true,
+  "elyby_cookies": "",
+  "modrinth_search_query": "",
+  "modrinth_categories": [],
+  "auto_login": false,
+  "language": "en",
+  "modrinth_api_key": "",
+  "last_backup": "",
+  "skin": "",
+  "last_update_check": "",
+  "cloud_sync_enabled": false,
+  "plugins": [],
+  "login_cookie": "Firepdx",
+  "profiles": {
+    "Default": {
+      "ram": 4096,
+      "mod_loader": "None",
+      "mods_folder": "",
+      "extra_jvm_args": "",
+      "version": "latest-release"
+    },
+    "Firepdx": {
+      "ram": 4096,
+      "mod_loader": "None",
+      "mods_folder": "",
+      "extra_jvm_args": "",
+      "version": "latest-release"
+    }
+  },
+  "active_profile": "Default",
+  "splash_screen": "assets/title.png",
+  "debug_mode": false,
+  "server_jar": "E:/New folder (5)/server.jar",
+  "installed_modpacks": [
+    "Vehicle-Technology-Mod.zip"
+  ]
+}

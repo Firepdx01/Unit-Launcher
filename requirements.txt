@@ -1,3 +1,5 @@
 PyQt5
-minecraft-launcher-lib
-random-username
+minecraft_launcher_lib
+random_username
+requests
+Flask

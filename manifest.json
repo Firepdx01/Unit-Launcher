@@ -1,0 +1,17 @@
+{
+    "metadata": {
+        "game": "minecraft",
+        "name": "Example Pack",
+        "version": "1.0.0"
+    },
+    "files": [
+        {
+            "type": "mod",
+            "id": "examplemod",
+            "name": "Example Mod",
+            "path": "mods/examplemod.jar",
+            "version": "1.0.0",
+            "hash": "sha256_checksum"
+        }
+    ]
+}

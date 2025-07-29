@@ -1,0 +1,20 @@
+{
+    "minecraft_dir": "C:\\Users\\dada\\AppData\\Roaming\\.minecraft",
+    "backup_dir": "E:\\2\\backups",
+    "download_threads": 4,
+    "auto_backup": true,
+    "verify_hashes": true,
+    "theme": "None",
+    "github_repo": "yourname/ModpackInstaller",
+    "minecraft_directory": "C:\\Users\\dada\\AppData\\Roaming\\.minecraft",
+    "ram": 4096,
+    "mod_loader": "None",
+    "mods_folder": "",
+    "extra_jvm_args": "",
+    "username": "Firepdx",
+    "server": "",
+    "mods_dir": "C:\\Users\\dada\\AppData\\Roaming\\.minecraft\\mods",
+    "resourcepacks_dir": "C:\\Users\\dada\\AppData\\Roaming\\.minecraft\\resourcepacks",
+    "saves_dir": "C:\\Users\\dada\\AppData\\Roaming\\.minecraft\\saves",
+    "config_dir": "C:\\Users\\dada\\AppData\\Roaming\\.minecraft\\config"
+}

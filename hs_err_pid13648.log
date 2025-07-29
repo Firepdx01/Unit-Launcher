@@ -1,0 +1,238 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 2147483648 bytes. Error detail: G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3603), pid=13648, tid=10620
+#
+# JRE version:  (21.0.3+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (21.0.3+9-LTS, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Xmx2048M -Xms2048M -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -Djava.library.path=E:/minecraft\versions\Fabric 1.21.1\natives -Djna.tmpdir=E:/minecraft\versions\Fabric 1.21.1\natives -Dorg.lwjgl.system.SharedLibraryExtractPath=E:/minecraft\versions\Fabric 1.21.1\natives -Dio.netty.native.workdir=E:/minecraft\versions\Fabric 1.21.1\natives -Dminecraft.launcher.brand=minecraft-launcher-lib -Dminecraft.launcher.version=7.1 -DFabricMcEmu= net.minecraft.client.main.Main  net.fabricmc.loader.impl.launch.knot.KnotClient --username Firepdx --version Fabric 1.21.1 --gameDir E:/minecraft --assetsDir E:/minecraft\assets --assetIndex 17 --uuid 0549898a-27f7-11f0-8540-90b11ca715ca --accessToken  --clientId ${clientid} --xuid ${auth_xuid} --userType msa --versionType modified
+
+Host: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz, 4 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.5678)
+Time: Sat May  3 13:17:16 2025 Pakistan Standard Time elapsed time: 0.030765 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000021453765ba0):  JavaThread "Unknown thread" [_thread_in_vm, id=10620, stack(0x00000078ade00000,0x00000078adf00000) (1024K)]
+
+Stack: [0x00000078ade00000,0x00000078adf00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6d8019]
+V  [jvm.dll+0x8b3993]
+V  [jvm.dll+0x8b5cee]
+V  [jvm.dll+0x8b63d3]
+V  [jvm.dll+0x285436]
+V  [jvm.dll+0x6d47e5]
+V  [jvm.dll+0x6c8f1a]
+V  [jvm.dll+0x35e13b]
+V  [jvm.dll+0x365ce6]
+V  [jvm.dll+0x3b7276]
+V  [jvm.dll+0x3b7548]
+V  [jvm.dll+0x33188c]
+V  [jvm.dll+0x33257b]
+V  [jvm.dll+0x87ba79]
+V  [jvm.dll+0x3c4641]
+V  [jvm.dll+0x864eb8]
+V  [jvm.dll+0x4593de]
+V  [jvm.dll+0x45af51]
+C  [jli.dll+0x52ab]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17374]
+C  [ntdll.dll+0x4cc91]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffe97620048, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+  0x00000214558f4ae0 WorkerThread "GC Thread#0"                     [id=15708, stack(0x00000078adf00000,0x00000078ae000000) (1024K)]
+  0x00000214559059d0 ConcurrentGCThread "G1 Main Marker"            [id=13368, stack(0x00000078ae000000,0x00000078ae100000) (1024K)]
+  0x0000021455906590 WorkerThread "G1 Conc#0"                       [id=15828, stack(0x00000078ae100000,0x00000078ae200000) (1024K)]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffe96d249e7]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007ffe976942a8] Heap_lock - owner thread: 0x0000021453765ba0
+
+Heap address: 0x0000000080000000, size: 2048 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffe97112079]
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.011 Loaded shared library E:\minecraft\runtime\java-runtime-delta\windows-x64\java-runtime-delta\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff680440000 - 0x00007ff68044e000 	E:\minecraft\runtime\java-runtime-delta\windows-x64\java-runtime-delta\bin\java.exe
+0x00007fff213f0000 - 0x00007fff215e8000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007fff1fef0000 - 0x00007fff1ffb2000 	C:\Windows\System32\KERNEL32.DLL
+0x00007fff1ea80000 - 0x00007fff1ed76000 	C:\Windows\System32\KERNELBASE.dll
+0x00007fff1f270000 - 0x00007fff1f370000 	C:\Windows\System32\ucrtbase.dll
+0x00007fff17480000 - 0x00007fff1749b000 	E:\minecraft\runtime\java-runtime-delta\windows-x64\java-runtime-delta\bin\VCRUNTIME140.dll
+0x00007fff15070000 - 0x00007fff15088000 	E:\minecraft\runtime\java-runtime-delta\windows-x64\java-runtime-delta\bin\jli.dll
+0x00007fff1f830000 - 0x00007fff1f9cd000 	C:\Windows\System32\USER32.dll
+0x00007fff1eea0000 - 0x00007fff1eec2000 	C:\Windows\System32\win32u.dll
+0x00007fff20300000 - 0x00007fff2032b000 	C:\Windows\System32\GDI32.dll
+0x00007fff1ed80000 - 0x00007fff1ee9a000 	C:\Windows\System32\gdi32full.dll
+0x00007fff0e3a0000 - 0x00007fff0e63a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.4355_none_60b8b9eb71f62e16\COMCTL32.dll
+0x00007fff1f370000 - 0x00007fff1f40d000 	C:\Windows\System32\msvcp_win.dll
+0x00007fff1ffc0000 - 0x00007fff2005e000 	C:\Windows\System32\msvcrt.dll
+0x00007fff20070000 - 0x00007fff2009f000 	C:\Windows\System32\IMM32.DLL
+0x0000000073b50000 - 0x0000000073b5c000 	C:\Program Files (x86)\360\Total Security\safemon\SafeWrapper.dll
+0x00007fff1f410000 - 0x00007fff1f4bf000 	C:\Windows\System32\ADVAPI32.dll
+0x00007fff1f9d0000 - 0x00007fff1fa6f000 	C:\Windows\System32\sechost.dll
+0x00007fff1f6e0000 - 0x00007fff1f803000 	C:\Windows\System32\RPCRT4.dll
+0x00007fff1ef80000 - 0x00007fff1efa7000 	C:\Windows\System32\bcrypt.dll
+0x00007ffef9a30000 - 0x00007ffef9adc000 	C:\Program Files (x86)\360\Total Security\safemon\libzdtp64.dll
+0x00007fff207b0000 - 0x00007fff20f1f000 	C:\Windows\System32\SHELL32.dll
+0x00007fff20ff0000 - 0x00007fff21045000 	C:\Windows\System32\SHLWAPI.dll
+0x00007fff1e430000 - 0x00007fff1e43a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007fff1bca0000 - 0x00007fff1bcac000 	E:\minecraft\runtime\java-runtime-delta\windows-x64\java-runtime-delta\bin\vcruntime140_1.dll
+0x00007fff05620000 - 0x00007fff056ad000 	E:\minecraft\runtime\java-runtime-delta\windows-x64\java-runtime-delta\bin\msvcp140.dll
+0x00007ffe969e0000 - 0x00007ffe97774000 	E:\minecraft\runtime\java-runtime-delta\windows-x64\java-runtime-delta\bin\server\jvm.dll
+0x00007fff200a0000 - 0x00007fff2010b000 	C:\Windows\System32\WS2_32.dll
+0x00007fff1e8e0000 - 0x00007fff1e92b000 	C:\Windows\SYSTEM32\POWRPROF.dll
+0x00007fff12e20000 - 0x00007fff12e47000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007fff1e8c0000 - 0x00007fff1e8d2000 	C:\Windows\SYSTEM32\UMPDC.dll
+0x00007fff1c870000 - 0x00007fff1c882000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007fff1b7f0000 - 0x00007fff1b7fa000 	E:\minecraft\runtime\java-runtime-delta\windows-x64\java-runtime-delta\bin\jimage.dll
+0x00007fff18e10000 - 0x00007fff18ff4000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007fff035c0000 - 0x00007fff035f4000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007fff1f080000 - 0x00007fff1f102000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007fff15050000 - 0x00007fff1506f000 	E:\minecraft\runtime\java-runtime-delta\windows-x64\java-runtime-delta\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;E:\minecraft\runtime\java-runtime-delta\windows-x64\java-runtime-delta\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.4355_none_60b8b9eb71f62e16;C:\Program Files (x86)\360\Total Security\safemon;E:\minecraft\runtime\java-runtime-delta\windows-x64\java-runtime-delta\bin\server
+
+VM Arguments:
+jvm_args: -Xmx2048M -Xms2048M -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -Djava.library.path=E:/minecraft\versions\Fabric 1.21.1\natives -Djna.tmpdir=E:/minecraft\versions\Fabric 1.21.1\natives -Dorg.lwjgl.system.SharedLibraryExtractPath=E:/minecraft\versions\Fabric 1.21.1\natives -Dio.netty.native.workdir=E:/minecraft\versions\Fabric 1.21.1\natives -Dminecraft.launcher.brand=minecraft-launcher-lib -Dminecraft.launcher.version=7.1 -DFabricMcEmu= net.minecraft.client.main.Main  
+java_command: net.fabricmc.loader.impl.launch.knot.KnotClient --username Firepdx --version Fabric 1.21.1 --gameDir E:/minecraft --assetsDir E:/minecraft\assets --assetIndex 17 --uuid 0549898a-27f7-11f0-8540-90b11ca715ca --accessToken  --clientId ${clientid} --xuid ${auth_xuid} --userType msa --versionType modified
+java_class_path (initial): E:/minecraft\libraries\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;E:/minecraft\libraries\org\ow2\asm\asm-analysis\9.7.1\asm-analysis-9.7.1.jar;E:/minecraft\libraries\org\ow2\asm\asm-commons\9.7.1\asm-commons-9.7.1.jar;E:/minecraft\libraries\org\ow2\asm\asm-tree\9.7.1\asm-tree-9.7.1.jar;E:/minecraft\libraries\org\ow2\asm\asm-util\9.7.1\asm-util-9.7.1.jar;E:/minecraft\libraries\net\fabricmc\sponge-mixin\0.15.4+mixin.0.8.7\sponge-mixin-0.15.4+mixin.0.8.7.jar;E:/minecraft\libraries\net\fabricmc\intermediary\1.21.1\intermediary-1.21.1.jar;E:/minecraft\libraries\net\fabricmc\fabric-loader\0.16.10\fabric-loader-0.16.10.jar;E:/minecraft\libraries\com\github\oshi\oshi-core\6.4.10\oshi-core-6.4.10.jar;E:/minecraft\libraries\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;E:/minecraft\libraries\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;E:/minecraft\libraries\com\google\guava\guava\32.1.2-jre\guava-32.1.2-jre.jar;E:/minecraft\libraries\com\ibm\icu\icu4j\73.2\icu4j-73.2.jar;E:/minecraft\libraries\com\mojang\authlib\6.0.54\authlib-6.0.54.jar;E:/minecraft\libraries\com\mojang\blocklist\1.0.10\blocklist-1.0.10.jar;E:/minecraft\libraries\com\mojang\brigadier\1.3.10\brigadier-1.3.10.jar;E:/minecraft\libraries\com\mojang\datafixerupper\8.0.16\datafixerupper-8.0.16.jar;E:/minecraft\libraries\com\mojang\logging\1.2.7\logging-1.2.7.jar;E:/minecraft\libraries\com\mojang\patchy\2.2.10\patchy-2.2.10.jar;E:/minecraft\libraries\com\mojang\text2speech\1.17.9\text2speech-1.17.9.jar;E:/minecraft\libraries\commons-codec\commons-codec\1.16.0\commons-codec-1.16.0.jar;E:/minecraft\libraries\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;E:/minecraft\libraries\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;E:/minecraft\libraries\io\netty\netty-buffer\4.1.97.Final\netty-buffer-4.1.97.Final.jar;E:/minecraft\libraries\io\netty\netty-codec\4.1.97.Final\netty-codec-4.1.97.Final.jar;E:/minecraft\libraries\io\netty\netty-common\4.1.97.Final\netty-common-4.1.97.Final.jar;E:/minecraft\libraries\io\netty\netty-handler\4.1.97.Final\netty-handler-4.1.97.Final.jar;E:/minecraft\libraries\io\netty\netty-resolver\4.1.97.Final\netty-resolver-4.1.97.Final.jar;E:/minecraft\libraries\io\netty\netty-transport-classes-epoll\4.1.97.Final\netty-transport-classes-epoll-4.1.97.Final.jar;E:/minecraft\libraries\io\netty\netty-transport-native-unix-common\4.1.97.Final\netty-transport-native-unix-common-4.1.97.Final.jar;E:/minecraft\libraries\io\netty\netty-transport\4.1.97.Final\netty-transport-4.1.97.Final.jar;E:/minecraft\libraries\it\unimi\dsi\fastutil\8.5.12\fastutil-8.5.12.jar;E:/minecraft\libraries\net\java\dev\jna\jna-platform\5.14.0\jna-platform-5.14.0.jar;E:/minecraft\libraries\net\java\dev\jna\jna\5.14.0\jna-5.14.0.jar;E:/minecraft\libraries\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;E:/minecraft\libraries\org\apache\commons\commons-compress\1.26.0\commons-compress-1.26.0.jar;E:/minecraft\libraries\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;E:/minecraft\libraries\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;E:/minecraft\libraries\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;E:/minecraft\libraries\org\apache\logging\log4j\log4j-api\2.22.1\log4j-api-2.22.1.jar;E:/minecraft\libraries\org\apache\logging\log4j\log4j-core\2.22.1\log4j-core-2.22.1.jar;E:/minecraft\libraries\org\apache\logging\log4j\log4j-slf4j2-impl\2.22.1\log4j-slf4j2-impl-2.22.1.jar;E:/minecraft\libraries\org\jcraft\jorbis\0.0.17\jorbis-0.0.17.jar;E:/minecraft\libraries\org\joml\joml\1.10.5\joml-1.10.5.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-freetype\3.3.3\lwjgl-freetype-3.3.3.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-freetype\3.3.3\lwjgl-freetype-3.3.3-natives-windows.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-freetype\3.3.3\lwjgl-freetype-3.3.3-natives-windows-arm64.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-freetype\3.3.3\lwjgl-freetype-3.3.3-natives-windows-x86.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-glfw\3.3.3\lwjgl-glfw-3.3.3.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-glfw\3.3.3\lwjgl-glfw-3.3.3-natives-windows.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-glfw\3.3.3\lwjgl-glfw-3.3.3-natives-windows-arm64.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-glfw\3.3.3\lwjgl-glfw-3.3.3-natives-windows-x86.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-jemalloc\3.3.3\lwjgl-jemalloc-3.3.3.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-jemalloc\3.3.3\lwjgl-jemalloc-3.3.3-natives-windows.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-jemalloc\3.3.3\lwjgl-jemalloc-3.3.3-natives-windows-arm64.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-jemalloc\3.3.3\lwjgl-jemalloc-3.3.3-natives-windows-x86.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-openal\3.3.3\lwjgl-openal-3.3.3.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-openal\3.3.3\lwjgl-openal-3.3.3-natives-windows.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-openal\3.3.3\lwjgl-openal-3.3.3-natives-windows-arm64.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-openal\3.3.3\lwjgl-openal-3.3.3-natives-windows-x86.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-opengl\3.3.3\lwjgl-opengl-3.3.3.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-opengl\3.3.3\lwjgl-opengl-3.3.3-natives-windows.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-opengl\3.3.3\lwjgl-opengl-3.3.3-natives-windows-arm64.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-opengl\3.3.3\lwjgl-opengl-3.3.3-natives-windows-x86.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-stb\3.3.3\lwjgl-stb-3.3.3.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-stb\3.3.3\lwjgl-stb-3.3.3-natives-windows.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-stb\3.3.3\lwjgl-stb-3.3.3-natives-windows-arm64.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-stb\3.3.3\lwjgl-stb-3.3.3-natives-windows-x86.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-tinyfd\3.3.3\lwjgl-tinyfd-3.3.3.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-tinyfd\3.3.3\lwjgl-tinyfd-3.3.3-natives-windows.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-tinyfd\3.3.3\lwjgl-tinyfd-3.3.3-natives-windows-arm64.jar;E:/minecraft\libraries\org\lwjgl\lwjgl-tinyfd\3.3.3\lwjgl-tinyfd-3.3.3-natives-windows-x86.jar;E:/minecraft\libraries\org\lwjgl\lwjgl\3.3.3\lwjgl-3.3.3.jar;E:/minecraft\libraries\org\lwjgl\lwjgl\3.3.3\lwjgl-3.3.3-natives-windows.jar;E:/minecraft\libraries\org\lwjgl\lwjgl\3.3.3\lwjgl-3.3.3-natives-windows-arm64.jar;E:/minecraft\libraries\org\lwjgl\lwjgl\3.3.3\lwjgl-3.3.3-natives-windows-x86.jar;E:/minecraft\libraries\org\lz4\lz4-java\1.8.0\lz4-java-1.8.0.jar;E:/minecraft\libraries\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;E:/minecraft\versions\1.21.1\1.21.1.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+    ccstr HeapDumpPath                             = MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump         {manageable} {command line}
+   size_t InitialHeapSize                          = 2147483648                                {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2147483648                                {product} {command line}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 2147483648                                {product} {command line}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2147483648                             {manageable} {ergonomic}
+     intx ThreadStackSize                          = 1024                                   {pd product} {command line}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:\Users\dada\miniconda3\Lib\site-packages\PyQt5\Qt5\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;E:\;C:\Users\dada\miniconda3;C:\Users\dada\miniconda3\Library\mingw-w64\bin;C:\Users\dada\miniconda3\Library\usr\bin;C:\Users\dada\miniconda3\Library\bin;C:\Users\dada\miniconda3\Scripts;C:\Users\dada\AppData\Local\Programs\Python\Launcher\;C:\Users\dada\AppData\Local\Microsoft\WindowsApps;C:\Users\dada\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\dada\.dotnet\tools;C:\Users\dada\AppData\Local\GitHubDesktop\bin;C:\Users\dada\AppData\Roaming\npm;c:\Users\dada\.vscode\extensions\ms-python.debugpy-2025.6.0-win32-x64\bundled\scripts\noConfigScripts
+USERNAME=dada
+LANG=en_US.UTF-8
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+TMP=C:\Users\dada\AppData\Local\Temp
+TEMP=C:\Users\dada\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.5678)
+OS uptime: 0 days 2:56 hours
+Hyper-V role detected
+
+CPU: total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 6 model 58 stepping 9 microcode 0x21, cx8, cmov, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, tsc, tscinvbit, avx, aes, erms, clmul, vzeroupper, clflush, hv, rdtscp, f16c
+Processor Information for all 4 processors :
+  Max Mhz: 3201, Current Mhz: 3201, Mhz Limit: 3201
+
+Memory: 4k page, system-wide physical 8146M (2655M free)
+TotalPageFile size 10186M (AvailPageFile size 1465M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 52M, peak: 2100M
+
+vm_info: OpenJDK 64-Bit Server VM (21.0.3+9-LTS) for windows-amd64 JRE (21.0.3+9-LTS), built on 2024-04-10T01:25:38Z by "MicrosoftCorporation" with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.

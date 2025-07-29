@@ -1,0 +1,14 @@
+{
+  "minecraft_directory": "E:/minecraft",
+  "ram": 2048,
+  "mod_loader": "None",
+  "mods_folder": "",
+  "extra_jvm_args": "",
+  "username": "Firepdx",
+  "server": "",
+  "accounts": [
+    {
+      "name": "Firepdx"
+    }
+  ]
+}
